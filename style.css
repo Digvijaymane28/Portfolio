@@ -1,0 +1,477 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: serif;
+}
+body{
+    background-color: black;
+    /* background-image: url(Images/b2.jpg); */
+    background-size: cover;
+    background-attachment: fixed;
+    background-color: #262626;
+
+}
+.navbar{
+    display: inline;
+    align-items: center;
+    
+}
+nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    position: fixed;
+    left: 0;
+    top: 0px;
+    width: 100%;
+    background-color: black;
+}
+.navbarr{
+    background: rgba(51, 51, 51, 0.8); /* Semi-transparent background */
+    backdrop-filter: blur(10px);        /* Blurry effect starts from 0 */
+    transition: backdrop-filter 0.3s ease-in-out; /* Smooth transition */
+    z-index: 1000;
+}
+.port-icon{
+    font-size: 1.8rem;
+    color: #f4f0f1;
+    transition: all ease 0.2s;
+    overflow: hidden;
+}
+
+.logo {
+    color: #f3eeef;
+   font-size: 40px;
+   margin-right: 350px;
+   font-weight: 1000;
+   overflow: hidden;
+   transition: all ease 0.2s;
+}
+.icon{
+    color: white;
+    margin-right: -35px;
+}
+.logo:hover {
+    transform: scale(1.1,1.1);
+}
+.navbar img{
+    width: 25%;
+    aspect-ratio: 3/2;
+    object-fit: contain;
+}
+nav ul{
+    margin-right:-150px ;
+}
+nav ul li{
+    font-size: 20px;
+    margin: 20px 0px;
+    display:inline-block;
+    list-style: none;
+    padding: 0 30px;
+}
+nav ul .ic{
+    margin:0px 10px;
+    position: relative;
+}
+nav ul .ic li a{
+    color: white;
+    margin-left: 10px;
+    text-decoration: none;
+}
+nav ul .ic::after{
+    content: '';
+    width: 0px;
+    height: 3px;
+    color: #ff004f;
+    position: absolute;
+    left:0;
+    bottom: 13px;
+    transition: 0.4s;
+}
+nav ul .ic:hover::after{
+    width: 75%;
+}
+
+.text {
+    margin-top:15% ;
+    font-size: 20px;
+    color: white;
+    display: flex;
+    justify-content: space-evenly;
+}
+.text h2{
+    margin-right: 20%;
+    margin-top: 5%;
+}
+.text p{
+    color:white;
+    font-size: 30px;
+    font-weight: 600;
+
+}
+h2{
+    font-size: 30px;
+}
+h2 span{
+    font-size: 50px;
+}
+.text-img img{
+    height: 400px;
+    width: 400px;
+    margin-right: 2%;
+    background-size: cover;
+    border-radius: 2rem;
+    overflow: hidden;
+    transition: all ease .8s;
+}
+.text-img:hover img{
+    scale: 1.05;
+}
+.animated-text span{
+    position: relative;
+    font-size: 30px;
+}
+.animated-text span::before{
+    content:'Web Developer';
+    color: #e1306c;
+    animation:words 20s infinite;
+}
+.animated-text span::after{
+    content: '';
+    position: absolute;
+    background-color: #262626;
+    width: calc(100% + 8px);
+    height: 100%;
+    color: #e1306c;
+    right: -8px;
+    animation:cursor .6s infinite, typing 20s steps(14) infinite;
+}
+@keyframes cursor{
+    to{
+        border-left: 2px solid #e1306c;
+    }
+}
+@keyframes words{
+    0%,20%{
+        content: 'Web Developer';
+    }
+    21%,40%{
+        content: 'Student';
+    }
+    41%,60%{
+        content: 'Freelancer';
+    }
+    61%,80%{
+        content: 'Gammer';
+    }
+    81%,100%{
+        content: 'Problem Solver';
+    }
+}
+@keyframes typing{
+    10%,15%,30%,35%,50%,55%,70%,75%,90%,95%{
+        width: 0;
+
+    }
+    5%,20%,25%,40%,45%,60%,65%,80%,85%,100%{
+        width:calc(100% + 8px)
+    }
+}
+
+.text span{
+    color: #e1306c;
+}
+
+/* ------------------------about------------------------------ */
+.about{
+    padding: 100px 100px;
+    margin-top: 5%;
+}
+.row{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.about-col1{
+    flex-basis: 35%;
+    
+}
+.about-col1 img {
+    height: 460px;
+    width: 410px;
+    margin-left: 10%;
+    margin-top: 10%;
+    border-radius: 2rem; 
+    overflow: hidden;
+    transition: all ease .8s;
+
+}
+.about-col1:hover img{
+    scale: 1.05;
+}
+.about-col2 {
+    flex-basis: 55%;
+    color: white;
+   
+}
+.about-col2 p{
+    font-size: 20px;
+    font-weight: 100;
+}
+.about-col2 p span{
+    color: #e1306c; 
+    font-size: 1.2rem;
+    font-weight: 550;
+}
+.sub-title{
+    color: white;
+    font-size: 60px;
+    font-weight: 600px;
+}
+.tab-title{
+    display: flex;
+    margin: 20px 0 10px;
+    margin-left: -20px;
+    align-items: center;
+    justify-content: center;
+}
+.tab-link{
+    margin: 20px;
+    position: relative;
+    cursor: pointer;
+}
+.tab-title p{
+    font-size: 24px;
+    font-weight: 500;
+}
+.tab-link::after{
+    content: '';
+    width: 0;
+    height: 3px;
+    background-color: #ff004f;
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    transition: 0.5s;
+}
+.tab-link.tab-skill::after{
+    width: 50%;
+}
+.tab-content ul li{
+    list-style: none;
+    margin: 10px 0;
+    font-size: 1.1rem;
+}
+.tab-content ul li span{
+
+    color: #e1306c;
+    font-size: 1.2rem;
+    font-weight: 530;
+}
+.tab-content{
+    display: none;
+}
+.tab-content.tab-skills{
+    display: block;
+}
+
+/* <!-- -------------------------------Services------------------------------------------ --> */
+#services{
+    padding: 30px 0;
+}
+.container1{
+    margin-top: 5%;
+    padding: 0 20px;
+}
+.container1 h2{
+
+    margin-bottom: 2% ;
+}
+.services-list{
+    display: flex;
+    margin-left: 6%;
+}
+.services-list-box{
+    height: 280px;
+    width: 300px;
+    padding: 20px;
+    margin-left:60px ;
+    background-color: #414040;
+    border-radius:1.5rem ;
+    overflow: hidden;
+    transition: transform 0.6s;
+}
+
+.services-list div .services-list-title{
+    color: white;
+    margin-right: 5%;
+    font-size: 30px;
+    display: flex;
+    justify-content: center;
+    font-weight: 500;
+}
+
+.abutton{
+    text-decoration: none;
+    cursor: pointer;
+    display: flex;
+    align-content: center;
+    border-radius:1rem ;
+    height: 1.5rem;
+    width: 5rem;
+    background-color: #e1306c;
+    border: 1px solid #e1306c ;
+
+}
+.services-list div a button{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    color: black;
+}
+.but{
+    display: flex;
+    justify-content: center;
+}
+.services-list p{
+    color: white;
+    margin: 10px 0px;
+}
+.services-list div:hover{
+    background-color: #4b4b4b;
+    border: 2px solid #ef5c8d;
+    transform: scale(1.05,1.05);
+}
+
+.service-icons{
+    display: flex;
+    justify-content: center;
+    color: #e1306c;
+    margin-right: 12%;
+    font-size: 3rem;
+}
+
+
+/* --------------------Contact-------------------------------- */
+.container2{
+    margin-top: 10%;
+
+}
+.sub-title{
+    font-size: 50px;
+    font-weight: 400;
+    display: flex;
+    justify-content: center;
+}
+.cotact-me{
+    margin-top: .5%;
+    color: white;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+}
+@import url('https://fonts.googleapis.com/css?family=Poppins:400,500,600,700&display=swap');
+
+
+.wrapper {
+  display: flex;
+  justify-content: center;
+  margin-top: 4%;
+}
+
+.wrapper .icon {
+  margin: 0 12px;
+  text-align: center;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  position: relative;
+  z-index: 2;
+  text-decoration: none;
+  transition: 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.wrapper .icon span {
+  display: block;
+  height: 40px;
+  width: 40px;
+  color: #000;
+  background: #fff;
+  border-radius: 50%;
+  position: relative;
+  z-index: 2;
+  box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.1);
+  transition: 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.wrapper .icon span i {
+  line-height: 40px;
+  font-size: 20px;
+}
+
+.wrapper .icon .tooltip {
+  position: absolute;
+  top: 0;
+  z-index: -1;
+  background: #fff;
+  color: #fff;
+  padding: 8px 15px;
+  font-size: 16px;
+  font-weight: 500;
+  border-radius: 25px;
+  opacity: 0;
+  pointer-events: none;
+  box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.1);
+  transition: 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.wrapper .icon:hover .tooltip {
+  top: -50px;
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.icon .tooltip:before {
+  position: absolute;
+  content: "";
+  height: 15px;
+  width: 15px;
+  background: inherit;
+  left: 50%;
+  bottom: -6px;
+  transform: translateX(-50%) rotate(45deg);
+  z-index: -1;
+}
+
+.wrapper .icon:hover span {
+  color: #fff;
+}
+
+.wrapper .icon:hover span,
+.wrapper .icon:hover .tooltip {
+  text-shadow: 0px -1px 0px rgba(0, 0, 0, 0.4);
+}
+
+.wrapper .facebook:hover span,
+.wrapper .facebook:hover .tooltip {
+  background: #3B5999;
+}
+
+.wrapper .linkedin:hover span,
+.wrapper .linkedin:hover .tooltip {
+  background: #46C1F6;
+}
+
+.wrapper .instagram:hover span,
+.wrapper .instagram:hover .tooltip {
+  background: #e1306c;
+}
+
+.wrapper .github:hover span,
+.wrapper .github:hover .tooltip {
+  background: #333;
+}
