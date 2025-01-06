@@ -62,6 +62,7 @@ nav{
 }
 nav ul{
     margin-right:-150px ;
+    display: flex;
 }
 nav ul li{
     font-size: 20px;
@@ -78,12 +79,13 @@ nav ul .ic li a{
     color: white;
     margin-left: 10px;
     text-decoration: none;
+    position: relative;
 }
 nav ul .ic::after{
     content: '';
-    width: 0px;
+    width: 0;
     height: 3px;
-    color: #ff004f;
+    background: #ff004f;
     position: absolute;
     left:0;
     bottom: 13px;
