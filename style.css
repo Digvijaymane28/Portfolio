@@ -144,7 +144,7 @@ h2 span{
     position: absolute;
     background-color: #262626;
     width: calc(100% + 8px);
-    height: 100%;
+    height: 110%;
     color: #e1306c;
     right: -8px;
     animation:cursor .6s infinite, typing 20s steps(14) infinite;
